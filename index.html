@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  DEMO-LANDINGPAGE – Dachdeckerbetrieb (Beispieldaten für Testzwecke)
+  ============================================================================
+  Alle unten aufgeführten Angaben sind PLATZHALTER und müssen vor dem
+  Live-Schalten durch die echten Unternehmensdaten ersetzt werden:
+
+    - Firmenname:        Dachdecker Schmidt & Söhne (fiktiv)
+    - Einsatzgebiet:      München und Umgebung
+    - Telefonnummer:      089 123 456 78   (tel-Link: +498912345678)
+    - WhatsApp-Nummer:    0170 123 4567    (wa.me-Link: 491701234567)
+    - E-Mail:             info@dachdecker-schmidt-muenchen.de
+    - Adresse:            Handwerkerstraße 12, 80331 München
+    - Google-Bewertungen: 4.9 / 5 (128 Bewertungen) – fiktiv
+    - Projektfotos:       Platzhalter-Grafiken, bitte durch echte WebP-Fotos
+                          ersetzen (siehe /images)
+
+  Das Kontaktformular zeigt aktuell nur eine simulierte Erfolgsmeldung an.
+  Für echten E-Mail-Versand muss js/script.js an einen Formular-Backend-
+  Dienst (z. B. eigenes PHP-Skript, Formspree, Netlify Forms o. ä.)
+  angebunden werden.
+  ============================================================================
+-->
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dachdecker München | Dachsanierung, Neueindeckung &amp; Reparatur – Dachdecker Schmidt &amp; Söhne</title>
+<meta name="description" content="Dachdecker Schmidt &amp; Söhne – Ihr Meisterbetrieb für Dachsanierung, Neueindeckung, Dachreparatur und Flachdach in München und Umgebung. Faire Festpreise, saubere Ausführung. Jetzt kostenlos anrufen!">
+<meta name="keywords" content="Dachdecker München, Dachsanierung München, Dachreparatur München, Neueindeckung München, Flachdach München, Steildach, Sturmschäden">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.dachdecker-schmidt-muenchen.de/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Dachdecker München | Dachdecker Schmidt & Söhne">
+<meta property="og:description" content="Ihr Dach in den besten Händen – Dachsanierung, Neueindeckung, Reparatur und mehr in München und Umgebung.">
+<meta property="og:locale" content="de_DE">
+
+<!-- Favicon (Platzhalter) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%235D4037'/%3E%3Cpath d='M20 55 L50 30 L80 55' stroke='%23C49A6C' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='32' y='55' width='36' height='24' fill='%23F8F5F1'/%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Strukturierte Daten (Platzhalter-Werte) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  "name": "Dachdecker Schmidt & Söhne",
+  "image": "https://www.dachdecker-schmidt-muenchen.de/images/hero.webp",
+  "telephone": "+498912345678",
+  "email": "info@dachdecker-schmidt-muenchen.de",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Handwerkerstraße 12",
+    "addressLocality": "München",
+    "postalCode": "80331",
+    "addressCountry": "DE"
+  },
+  "areaServed": "München und Umgebung",
+  "openingHours": "Mo-Fr 07:00-17:00",
+  "priceRange": "$$",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "128"
+  }
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a href="#start" class="logo">
+      <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+      <span>Dachdecker <strong>Schmidt &amp; Söhne</strong></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#referenzen">Referenzen</a></li>
+        <li><a href="#bewertungen">Bewertungen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+498912345678" class="btn btn-call btn-small">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <span>Jetzt anrufen</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="start">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow">Meisterbetrieb für München und Umgebung</p>
+        <h1>Ihr Dach in den besten Händen.</h1>
+        <p class="hero-sub">Ob Dachsanierung, Neueindeckung oder Reparatur – wir stehen für Qualität, Zuverlässigkeit und saubere Handwerksarbeit in München und Umgebung.</p>
+
+        <div class="hero-buttons">
+          <a href="tel:+498912345678" class="btn btn-call btn-large">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            Jetzt kostenlos anrufen
+          </a>
+          <a href="https://wa.me/491701234567?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Dachdecker-Leistung." class="btn btn-whatsapp btn-large" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp schreiben
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="stars" aria-hidden="true">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p><strong>4,9 / 5</strong> · Zahlreiche zufriedene Kunden aus Ihrer Region</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LEISTUNGEN ================= -->
+  <section class="section" id="leistungen">
+    <div class="container">
+      <p class="eyebrow center">Unsere Leistungen</p>
+      <h2 class="section-title center">Alles rund um Ihr Dach</h2>
+      <p class="section-sub center">Von der kleinen Reparatur bis zur kompletten Neueindeckung – wir sind Ihr Ansprechpartner in München und Umgebung.</p>
+
+      <div class="grid grid-services" data-reveal-group>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-house-chimney-window" aria-hidden="true"></i></div>
+          <h3>Dachsanierung</h3>
+          <p>Energieeffiziente Sanierung Ihres Daches – von der Dämmung bis zur neuen Eindeckung.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+          <h3>Neueindeckung</h3>
+          <p>Hochwertige Neueindeckung mit langlebigen Materialien nach Ihren Wünschen.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+          <h3>Dachreparatur</h3>
+          <p>Schnelle und zuverlässige Reparatur bei undichten Stellen oder Schäden.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-table-cells" aria-hidden="true"></i></div>
+          <h3>Flachdach</h3>
+          <p>Fachgerechte Abdichtung und Sanierung von Flachdächern für Wohn- und Gewerbebau.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-house-chimney" aria-hidden="true"></i></div>
+          <h3>Steildach</h3>
+          <p>Klassische Steildach-Konstruktionen mit hochwertigen Ziegeln und sauberer Verarbeitung.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i></div>
+          <h3>Dachfenster</h3>
+          <p>Einbau und Austausch von Dachfenstern für mehr Licht und Wohnkomfort.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-cloud-rain" aria-hidden="true"></i></div>
+          <h3>Dachrinnen</h3>
+          <p>Montage, Reinigung und Reparatur von Dachrinnen und Fallrohren.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+          <h3>Sturmschäden</h3>
+          <p>Schnelle Notdienst-Reparatur und Abwicklung mit Ihrer Versicherung.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-car" aria-hidden="true"></i></div>
+          <h3>Carports</h3>
+          <p>Individuelle Carport-Konstruktionen aus hochwertigem Holz oder Metall.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+        <article class="card service-card" data-reveal>
+          <div class="card-icon"><i class="fa-solid fa-warehouse" aria-hidden="true"></i></div>
+          <h3>Garagendächer</h3>
+          <p>Neueindeckung und Sanierung von Garagendächern – dicht und langlebig.</p>
+          <a href="#kontakt" class="card-link">Jetzt anfragen <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WARUM WIR ================= -->
+  <section class="section section-alt" id="warum-wir">
+    <div class="container">
+      <p class="eyebrow center">Warum wir?</p>
+      <h2 class="section-title center">Darauf können Sie sich verlassen</h2>
+
+      <div class="grid grid-benefits" data-reveal-group>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-award" aria-hidden="true"></i>
+          <h3>Meisterbetrieb</h3>
+          <p>Handwerkliche Qualität nach Meisterstandard.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-clock" aria-hidden="true"></i>
+          <h3>Schnelle Termine</h3>
+          <p>Kurzfristige Besichtigungs- und Ausführungstermine.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          <h3>Hochwertige Materialien</h3>
+          <p>Langlebige Produkte namhafter Hersteller.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-hand-holding-dollar" aria-hidden="true"></i>
+          <h3>Faire Festpreise</h3>
+          <p>Transparente Angebote ohne versteckte Kosten.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-broom" aria-hidden="true"></i>
+          <h3>Saubere Ausführung</h3>
+          <p>Ordentliche Baustelle, saubere Übergabe.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <i class="fa-solid fa-comments" aria-hidden="true"></i>
+          <h3>Persönliche Beratung</h3>
+          <p>Ein fester Ansprechpartner für Ihr Projekt.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REFERENZEN ================= -->
+  <section class="section" id="referenzen">
+    <div class="container">
+      <p class="eyebrow center">Referenzen</p>
+      <h2 class="section-title center">Unsere Projekte im Vorher-Nachher-Vergleich</h2>
+      <p class="section-sub center">Beispielhafte Projektdarstellung – bitte durch echte Projektfotos ersetzen.</p>
+
+      <div class="grid grid-gallery" data-reveal-group>
+        <figure class="gallery-item" data-reveal>
+          <div class="gallery-compare">
+            <div class="gallery-before"><span>Vorher</span></div>
+            <div class="gallery-after"><span>Nachher</span></div>
+          </div>
+          <figcaption>
+            <h3>Neueindeckung Einfamilienhaus</h3>
+            <p>Komplette Neueindeckung mit Tondachziegeln in München-Solln.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-reveal>
+          <div class="gallery-compare">
+            <div class="gallery-before gallery-2"><span>Vorher</span></div>
+            <div class="gallery-after gallery-2"><span>Nachher</span></div>
+          </div>
+          <figcaption>
+            <h3>Flachdachsanierung Gewerbeobjekt</h3>
+            <p>Abdichtung und Sanierung eines Flachdachs in München-Sendling.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="gallery-item" data-reveal>
+          <div class="gallery-compare">
+            <div class="gallery-before gallery-3"><span>Vorher</span></div>
+            <div class="gallery-after gallery-3"><span>Nachher</span></div>
+          </div>
+          <figcaption>
+            <h3>Sturmschaden-Reparatur</h3>
+            <p>Schnelle Instandsetzung nach Sturmschaden in Unterhaching.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BEWERTUNGEN ================= -->
+  <section class="section section-alt" id="bewertungen">
+    <div class="container">
+      <p class="eyebrow center">Kundenbewertungen</p>
+      <h2 class="section-title center">Das sagen unsere Kunden</h2>
+
+      <div class="review-summary">
+        <div class="stars" aria-hidden="true">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p><strong>4,9 von 5</strong> · basierend auf 128 Google-Bewertungen</p>
+      </div>
+
+      <div class="grid grid-reviews" data-reveal-group>
+        <div class="card review-card" data-reveal>
+          <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>&bdquo;Schnelle, saubere Arbeit und faire Preise. Die Kommunikation war von Anfang an top.&ldquo;</p>
+          <p class="review-author">– Michael K.</p>
+        </div>
+        <div class="card review-card" data-reveal>
+          <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>&bdquo;Nach dem Sturm war das Team innerhalb weniger Stunden vor Ort. Absolut zuverlässig!&ldquo;</p>
+          <p class="review-author">– Sandra L.</p>
+        </div>
+        <div class="card review-card" data-reveal>
+          <div class="stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>&bdquo;Unser neues Dach sieht fantastisch aus. Klare Empfehlung für alle in München!&ldquo;</p>
+          <p class="review-author">– Thomas B.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABLAUF ================= -->
+  <section class="section" id="ablauf">
+    <div class="container">
+      <p class="eyebrow center">So läuft die Zusammenarbeit ab</p>
+      <h2 class="section-title center">In 5 Schritten zu Ihrem neuen Dach</h2>
+
+      <div class="steps" data-reveal-group>
+        <div class="step" data-reveal>
+          <div class="step-number"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+          <h3>1. Kontakt aufnehmen</h3>
+          <p>Sie erreichen uns telefonisch, per WhatsApp oder über das Kontaktformular.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-number"><i class="fa-solid fa-comments" aria-hidden="true"></i></div>
+          <h3>2. Kostenlose Beratung</h3>
+          <p>Wir besprechen Ihr Anliegen und die nächsten Schritte.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-number"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+          <h3>3. Vor-Ort-Termin</h3>
+          <p>Persönliche Begutachtung Ihres Daches vor Ort.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-number"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i></div>
+          <h3>4. Transparentes Angebot</h3>
+          <p>Sie erhalten ein faires Festpreis-Angebot ohne versteckte Kosten.</p>
+        </div>
+        <div class="step" data-reveal>
+          <div class="step-number"><i class="fa-solid fa-helmet-safety" aria-hidden="true"></i></div>
+          <h3>5. Fachgerechte Umsetzung</h3>
+          <p>Unser Team setzt Ihr Projekt sauber und termingerecht um.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="section section-alt" id="kontakt">
+    <div class="container">
+      <p class="eyebrow center">Kontakt</p>
+      <h2 class="section-title center">Kostenlose Anfrage stellen</h2>
+      <p class="section-sub center">Wir melden uns in der Regel innerhalb weniger Stunden bei Ihnen.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Telefonnummer *</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+          <div class="form-row">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="address">Adresse</label>
+            <input type="text" id="address" name="address" autocomplete="street-address">
+          </div>
+          <div class="form-row">
+            <label for="message">Nachricht *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-row form-checkbox">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">Ich akzeptiere die <a href="datenschutz.html">Datenschutzerklärung</a>. *</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large btn-block">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+            Kostenlose Anfrage senden
+          </button>
+
+          <p class="form-success" id="form-success" role="status" hidden>
+            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+            Vielen Dank! Ihre Anfrage wurde erfolgreich versendet. Wir melden uns in Kürze bei Ihnen.
+          </p>
+        </form>
+
+        <aside class="contact-box">
+          <h3>Direkt erreichbar</h3>
+          <a href="tel:+498912345678" class="btn btn-call btn-large btn-block">
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            089 123 456 78
+          </a>
+          <a href="https://wa.me/491701234567" class="btn btn-whatsapp btn-large btn-block" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            WhatsApp schreiben
+          </a>
+
+          <ul class="contact-info">
+            <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:info@dachdecker-schmidt-muenchen.de">info@dachdecker-schmidt-muenchen.de</a></li>
+            <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Handwerkerstraße 12, 80331 München</li>
+            <li><i class="fa-solid fa-clock" aria-hidden="true"></i> Mo–Fr 07:00–17:00 Uhr, Sa nach Vereinbarung</li>
+            <li><i class="fa-solid fa-map" aria-hidden="true"></i> Einsatzgebiet: München und Umgebung</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= STICKY MOBILE BUTTONS ================= -->
+<div class="sticky-mobile" aria-hidden="false">
+  <a href="tel:+498912345678" class="sticky-btn sticky-call">
+    <i class="fa-solid fa-phone" aria-hidden="true"></i> Anrufen
+  </a>
+  <a href="https://wa.me/491701234567" class="sticky-btn sticky-whatsapp" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> WhatsApp
+  </a>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <a href="#start" class="logo logo-footer">
+        <i class="fa-solid fa-house-chimney" aria-hidden="true"></i>
+        <span>Dachdecker <strong>Schmidt &amp; Söhne</strong></span>
+      </a>
+      <p>Ihr Meisterbetrieb für Dachsanierung, Neueindeckung, Reparatur und mehr in München und Umgebung.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+498912345678">089 123 456 78</a></li>
+        <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/491701234567" target="_blank" rel="noopener">0170 123 4567</a></li>
+        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:info@dachdecker-schmidt-muenchen.de">info@dachdecker-schmidt-muenchen.de</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Öffnungszeiten</h4>
+      <ul>
+        <li>Mo–Fr: 07:00–17:00 Uhr</li>
+        <li>Sa: nach Vereinbarung</li>
+        <li>So: geschlossen</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Einsatzgebiet</h4>
+      <ul>
+        <li>München</li>
+        <li>Sowie umliegende Gemeinden</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Rechtliches</h4>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Dachdecker Schmidt &amp; Söhne. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
