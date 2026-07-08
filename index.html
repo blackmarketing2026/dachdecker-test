@@ -40,6 +40,7 @@
 
 <!-- Favicon (Platzhalter) -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%235D4037'/%3E%3Cpath d='M20 55 L50 30 L80 55' stroke='%23C49A6C' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='32' y='55' width='36' height='24' fill='%23F8F5F1'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="images/hero-roofing.jpg">
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,7 +58,7 @@
   "@context": "https://schema.org",
   "@type": "RoofingContractor",
   "name": "Dachdecker Schmidt & Söhne",
-  "image": "https://www.dachdecker-schmidt-muenchen.de/images/hero.webp",
+  "image": "https://www.dachdecker-schmidt-muenchen.de/images/hero-roofing.jpg",
   "telephone": "+491739344650",
   "email": "info@dachdecker-schmidt-muenchen.de",
   "address": {
@@ -278,8 +279,9 @@
       <div class="grid grid-gallery" data-reveal-group>
         <figure class="gallery-item" data-reveal>
           <div class="gallery-compare">
-            <div class="gallery-before"><span>Vorher</span></div>
-            <div class="gallery-after"><span>Nachher</span></div>
+            <img src="images/projekt-neueindeckung.jpg" alt="Vorher-Nachher-Vergleich einer Neueindeckung am Einfamilienhaus" loading="lazy">
+            <span class="gallery-label gallery-label-before">Vorher</span>
+            <span class="gallery-label gallery-label-after">Nachher</span>
           </div>
           <figcaption>
             <h3>Neueindeckung Einfamilienhaus</h3>
@@ -289,8 +291,9 @@
 
         <figure class="gallery-item" data-reveal>
           <div class="gallery-compare">
-            <div class="gallery-before gallery-2"><span>Vorher</span></div>
-            <div class="gallery-after gallery-2"><span>Nachher</span></div>
+            <img src="images/projekt-flachdach.jpg" alt="Vorher-Nachher-Vergleich einer Flachdachsanierung am Gewerbeobjekt" loading="lazy">
+            <span class="gallery-label gallery-label-before">Vorher</span>
+            <span class="gallery-label gallery-label-after">Nachher</span>
           </div>
           <figcaption>
             <h3>Flachdachsanierung Gewerbeobjekt</h3>
@@ -300,8 +303,9 @@
 
         <figure class="gallery-item" data-reveal>
           <div class="gallery-compare">
-            <div class="gallery-before gallery-3"><span>Vorher</span></div>
-            <div class="gallery-after gallery-3"><span>Nachher</span></div>
+            <img src="images/projekt-sturmschaden.jpg" alt="Vorher-Nachher-Vergleich einer Reparatur nach Sturmschaden" loading="lazy">
+            <span class="gallery-label gallery-label-before">Vorher</span>
+            <span class="gallery-label gallery-label-after">Nachher</span>
           </div>
           <figcaption>
             <h3>Sturmschaden-Reparatur</h3>
@@ -427,6 +431,7 @@
         </form>
 
         <aside class="contact-box">
+          <img class="contact-photo" src="images/hero-roofing.jpg" alt="Dachdecker-Team bei Arbeiten auf einem Ziegeldach" loading="lazy">
           <h3>Direkt erreichbar</h3>
           <a href="tel:+491739344650" class="btn btn-call btn-large btn-block">
             <i class="fa-solid fa-phone" aria-hidden="true"></i>

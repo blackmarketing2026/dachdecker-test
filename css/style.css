@@ -41,6 +41,7 @@ body {
   background: var(--color-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -214,22 +215,15 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 20%, rgba(196, 154, 108, 0.35), transparent 45%),
-    linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 55%, #3a2924 100%);
+    linear-gradient(90deg, rgba(74, 50, 42, 0.96) 0%, rgba(74, 50, 42, 0.86) 42%, rgba(74, 50, 42, 0.48) 72%, rgba(74, 50, 42, 0.22) 100%),
+    url("../images/hero-roofing.jpg") center right / cover no-repeat;
   z-index: 0;
 }
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.12;
-  background-image: repeating-linear-gradient(
-    45deg,
-    var(--color-accent) 0,
-    var(--color-accent) 2px,
-    transparent 2px,
-    transparent 22px
-  );
+  background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.24));
 }
 
 .hero-inner { position: relative; z-index: 1; }
@@ -356,7 +350,40 @@ ul { list-style: none; margin: 0; padding: 0; }
   box-shadow: var(--shadow-sm);
   aspect-ratio: 4 / 3;
   isolation: isolate;
+  background: var(--color-primary-dark);
 }
+.gallery-compare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.gallery-compare:hover img { transform: scale(1.03); }
+.gallery-label {
+  position: absolute;
+  bottom: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(74, 50, 42, 0.88);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+.gallery-label::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 0.78rem;
+}
+.gallery-label-before { left: 16px; }
+.gallery-label-before::before { content: "\f071"; }
+.gallery-label-after { right: 16px; background: rgba(30, 123, 63, 0.9); }
+.gallery-label-after::before { content: "\f00c"; }
 .gallery-before, .gallery-after {
   position: absolute;
   inset: 0;
@@ -497,6 +524,15 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding: 28px 24px;
   box-shadow: var(--shadow-md);
 }
+.contact-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center right;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
 .contact-box h3 { color: var(--color-white); margin-bottom: 16px; }
 .contact-box .btn-call { background: var(--color-accent); color: var(--color-primary-dark); }
 .contact-box .btn-call:hover { background: #b3854f; }
@@ -574,6 +610,72 @@ ul { list-style: none; margin: 0; padding: 0; }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
+}
+
+@media (max-width: 767px) {
+  .container { max-width: 100%; }
+  .site-header { overflow: hidden; }
+
+  .header-actions .btn-small { display: none; }
+  .logo {
+    max-width: calc(100vw - 88px);
+    min-width: 0;
+  }
+  .logo span { min-width: 0; }
+
+  .eyebrow {
+    letter-spacing: 0.03em;
+    overflow-wrap: break-word;
+  }
+  .section-title,
+  .section-sub,
+  .hero-content,
+  .hero-trust p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .grid,
+  .card,
+  .benefit,
+  .gallery-item,
+  .contact-grid,
+  .contact-form,
+  .contact-box {
+    min-width: 0;
+  }
+
+  .sticky-btn {
+    min-width: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 420px) {
+  .container { padding: 0 16px; }
+
+  .header-inner { gap: 8px; }
+  .logo {
+    max-width: 220px;
+    gap: 8px;
+    font-size: 0.84rem;
+    line-height: 1.15;
+  }
+  .header-actions { gap: 6px; }
+
+  .hero { padding: 60px 0 52px; }
+  .hero-bg {
+    background:
+      linear-gradient(90deg, rgba(74, 50, 42, 0.97) 0%, rgba(74, 50, 42, 0.88) 52%, rgba(74, 50, 42, 0.48) 100%),
+      url("../images/hero-roofing.jpg") 58% center / cover no-repeat;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+    white-space: normal;
+  }
+  .hero-trust p { max-width: 100%; }
 }
 
 /* ==========================================================================
